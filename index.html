@@ -136,40 +136,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a>
     Coded by <a href="#">M4XAW.</a>
   </div>
-  <script>
-    const animatedElementsRight = document.querySelectorAll(".animated-right");
-    const animatedElementsLeft = document.querySelectorAll(".animated-left");
-    const animatedElementsTop = document.querySelectorAll(".animated-top");
-
-    window.addEventListener("scroll", animate);
-
-    function animate() {
-
-      animatedElementsRight.forEach((elem) => {
-        const distView = elem.getBoundingClientRect().top - window.innerHeight + 20;
-
-        if (distView < 0) {
-          elem.classList.add("active");
-        }
-      });
-
-      animatedElementsLeft.forEach((elem) => {
-        const distView = elem.getBoundingClientRect().top - window.innerHeight + 20;
-
-        if (distView < 0) {
-          elem.classList.add("active");
-        }
-      });
-
-      animatedElementsTop.forEach((elem) => {
-        const distView = elem.getBoundingClientRect().top - window.innerHeight + 20;
-
-        if (distView < 0) {
-          elem.classList.add("active");
-        }
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
