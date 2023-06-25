@@ -135,10 +135,25 @@ h1 {
     font-family: 'Fraunces', serif;
     text-decoration: underline;
     text-transform: uppercase;
-    text-decoration-color: hsl(51, 100%, 57%);
     transition: all 0.3s ease;
     text-underline-offset: 0.5rem;
     text-decoration-thickness: 0.4rem;
+}
+
+#yellow {
+    text-decoration-color: hsl(47, 100%, 86%);
+}
+
+#yellow:hover {
+    text-decoration-color: hsl(49, 100%, 50%);
+}
+
+#pink {
+    text-decoration-color: hsl(10, 96%, 91%);
+}
+
+#pink:hover {
+    text-decoration-color: hsl(5, 98%, 68%);
 }
 
 /* .image-box {
