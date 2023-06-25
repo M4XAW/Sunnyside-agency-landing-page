@@ -13,6 +13,7 @@ body {
     font-family: 'Barlow', sans-serif;
     background-color: hsl(0, 0%, 98%);
     color: hsl(228, 12%, 44%);
+    overflow-x: hidden;
 }
 
 header {
@@ -79,14 +80,13 @@ header img {
 }
 
 .homepage img {
-    animation: fade 1.5s ease;
     animation-delay: 0.5s;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .homepage img:hover {
-    transform: scale(1.1);
+    transform: translateY(1rem);
 }
 
 h1 {
@@ -97,7 +97,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.6rem;
     padding: 5rem 0 3rem 0;
-    animation: fade 1.5s ease;
+    animation: fade 1.5s ease, slide 1.5s ease;
 }
 
 .container-box {
@@ -254,7 +254,7 @@ footer {
     flex-direction: column;
     height: 40vh;
     background-color: hsl(171, 41%, 69%);
-    padding: 4rem 0;
+    padding: 4% 0;
 }
 
 /* color of logo-footer : hsl(168, 34%, 41%) */
@@ -303,6 +303,28 @@ footer {
     text-decoration: underline;
 }
 
+.animated-right, .animated-left, .animated-top {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1.5s ease;
+}
+
+.animated-right {
+    transform: translateX(-100%);
+}
+
+.animated-left {
+    transform: translateX(100%);
+}
+
+.animated-top {
+    transform: translateY(-100%);
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
 @keyframes fade {
     0% {
         opacity: 0;
@@ -310,6 +332,16 @@ footer {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0%);
     }
 }
 
@@ -336,11 +368,12 @@ footer {
     }
 
     .box {
+        height: auto;
         width: 100%;
         padding: 15%;
     }
 
-    .text { 
+    .text {
         padding: 0 10%;
     }
 
@@ -367,6 +400,10 @@ footer {
 
     h1 {
         font-size: 2rem;
+    }
+
+    .paragraph {
+        font-size: 1rem;
     }
 
     .title {

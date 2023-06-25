@@ -35,8 +35,9 @@
     <div class="container">
       <div id="text" class="container-box">
         <div class="box">
-          <h2 class="title">Transform your brand</h2>
-          <p class="paragraph">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through
+          <h2 class="title animated-right">Transform your brand</h2>
+          <p class="paragraph animated-right">We are a full-service creative agency specializing in helping brands grow fast. Engage
+            your clients through
             compelling visuals that do most of the marketing for you.</p>
           <a href="">Learn more</a>
         </div>
@@ -49,8 +50,9 @@
           <img src="./images/desktop/image-stand-out.jpg" alt="">
         </div>
         <div class="box">
-          <h2 class="title">Stand out to the right audience</h2>
-          <p class="paragraph">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <h2 class="title animated-left">Stand out to the right audience</h2>
+          <p class="paragraph animated-left">Using a collaborative formula of designers, researchers, photographers, videographers,
+            and copywriters, we’ll build and extend your brand in digital places.</p>
           <a href="">Learn more</a>
         </div>
       </div>
@@ -58,53 +60,58 @@
         <div class="image-box">
           <img src="./images/desktop/image-graphic-design.jpg" alt="">
           <div class="text">
-            <h2 class="title">Graphic design</h2>
-            <p class="paragraph">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+            <h2 class="title animated-top">Graphic design</h2>
+            <p class="paragraph animated-top">Great design makes you memorable. We deliver artwork that underscores your brand
+              message and captures potential clients’ attention.</p>
           </div>
         </div>
         <div class="image-box">
           <img src="./images/desktop/image-photography.jpg" alt="">
           <div class="text">
-            <h2 class="title">Photography</h2>
-            <p class="paragraph">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+            <h2 class="title animated-top">Photography</h2>
+            <p class="paragraph animated-top">Increase your credibility by getting the most stunning, high-quality photos that
+              improve your business image.</p>
           </div>
-        </div>
-    </div>
-    <div class="clients">
-      <h2 class="title-client">Client testimonials</h2>
-      <div class="client-grid">
-        <div class="client">
-          <div class="avatar">
-            <img src="./images/image-emily.jpg" alt="avatar">
-          </div>
-          <p class="paragraph">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
-          <p class="name">Emily R.</p>
-          <p class="job">Marketing Director</p>
-        </div>
-        <div class="client">
-          <div class="avatar">
-            <img src="./images/image-thomas.jpg" alt="avatar">
-          </div>
-          <p class="paragraph">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
-          <p class="name">Thomas S.</p>
-          <p class="job">Chief Operating Officer</p>
-        </div>
-        <div class="client">
-          <div class="avatar">
-            <img src="./images/image-jennie.jpg" alt="avatar">
-          </div>
-          <p class="paragraph">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
-          <p class="name">Jennie F.</p>
-          <p class="job">Business Owner</p>
         </div>
       </div>
-    </div>
-    <div class="container-image">
-      <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="">
-      <img src="./images/desktop/image-gallery-orange.jpg" alt="">
-      <img src="./images/desktop/image-gallery-cone.jpg" alt="">
-      <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="">
-    </div>
+      <div class="clients">
+        <h2 class="title-client animated-top">Client testimonials</h2>
+        <div class="client-grid">
+          <div class="client animated-right">
+            <div class="avatar">
+              <img src="./images/image-emily.jpg" alt="avatar">
+            </div>
+            <p class="paragraph">We put our trust in Sunnyside and they delivered, making sure our needs were met and
+              deadlines were always hit.</p>
+            <p class="name">Emily R.</p>
+            <p class="job">Marketing Director</p>
+          </div>
+          <div class="client">
+            <div class="avatar">
+              <img src="./images/image-thomas.jpg" alt="avatar">
+            </div>
+            <p class="paragraph">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it
+              a satisfying and enjoyable experience.</p>
+            <p class="name">Thomas S.</p>
+            <p class="job">Chief Operating Officer</p>
+          </div>
+          <div class="client animated-left">
+            <div class="avatar">
+              <img src="./images/image-jennie.jpg" alt="avatar">
+            </div>
+            <p class="paragraph">Incredible end result! Our sales increased over 400% when we worked with Sunnyside.
+              Highly recommended!</p>
+            <p class="name">Jennie F.</p>
+            <p class="job">Business Owner</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-image">
+        <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="">
+        <img src="./images/desktop/image-gallery-orange.jpg" alt="">
+        <img src="./images/desktop/image-gallery-cone.jpg" alt="">
+        <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="">
+      </div>
   </main>
   <footer>
     <div class="logo-footer">
@@ -129,6 +136,40 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a>
     Coded by <a href="#">M4XAW.</a>
   </div>
+  <script>
+    const animatedElementsRight = document.querySelectorAll(".animated-right");
+    const animatedElementsLeft = document.querySelectorAll(".animated-left");
+    const animatedElementsTop = document.querySelectorAll(".animated-top");
+
+    window.addEventListener("scroll", animate);
+
+    function animate() {
+
+      animatedElementsRight.forEach((elem) => {
+        const distView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+
+        if (distView < 0) {
+          elem.classList.add("active");
+        }
+      });
+
+      animatedElementsLeft.forEach((elem) => {
+        const distView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+
+        if (distView < 0) {
+          elem.classList.add("active");
+        }
+      });
+
+      animatedElementsTop.forEach((elem) => {
+        const distView = elem.getBoundingClientRect().top - window.innerHeight + 20;
+
+        if (distView < 0) {
+          elem.classList.add("active");
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
