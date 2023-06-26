@@ -41,3 +41,11 @@ window.addEventListener(
   },
   false
 );
+
+const navMenu = document.getElementById("menu");
+const navMenuButton = document.querySelector(".nav-menu");
+
+navMenu.addEventListener("click", () => {
+  console.log("click");
+  navMenuButton.style.display = "block";
+});
