@@ -56,11 +56,11 @@ nav a:hover {
   padding: 1rem 1.8rem;
   margin: 0 2.5rem 0 1rem;
   border-radius: 2rem;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 #button-contact:hover {
-  border: 2px solid hsl(0, 0%, 98%);
+  outline: 2px solid hsl(0, 0%, 98%);
   background-color: transparent;
   color: hsl(0, 0%, 98%);
 }
