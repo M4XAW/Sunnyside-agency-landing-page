@@ -79,11 +79,11 @@ header img {
 .nav-menu {
   display: none;
   position: absolute;
-  max-width: 460px;
-  width: 400px;
+  width: 100vw;
+  max-width: 90vw;
   height: 300px;
   top: 14%;
-  right: 5%; 
+  right: 0;
   background-color: hsl(0, 0%, 98%);
   z-index: 1;
 }
